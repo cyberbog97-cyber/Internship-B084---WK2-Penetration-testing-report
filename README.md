@@ -240,16 +240,16 @@ Based on the information collected during the footprinting and network scanning 
 4. WAF technology            WAFW00F identified ModSecurity           Reveals information about the web              🟡 Low 
    identifiable              (SpiderLabs).                            application's security architecture.
    
-5. DNSSEC not detected       WHOIS and DNSRecon results indicated     If DNSSEC is not configured, DNS               🟠 Medium 
-                             that DNSSEC was unsigned or returned     responses may lack DNSSEC validation 
-                             no answer                                protection.           
+5. DNSSEC not detected     WHOIS and DNSRecon results indicated           If DNSSEC is not configured, DNS               🟠 Medium 
+                          that DNSSEC was unsigned or returned no answer  responses may lack DNSSEC validation protection
+                             .           
                              
 6. DNS infrastructure        DNSRecon identified DNS, mail            DNS information can help build a               🟠 Medium 
    information exposed       and service-related records.             broader infrastructure profile.               
    
 7. Multiple live hosts        Zenmap identified two active hosts:     Unknown or unauthorised devices may
-   visible on local network   192.168.0.1 and 192.168.0.100.          be present on a network and should be           🟡 Low 
-                                                                      investigated.    
+   visible on local network   192.168.0.1 and 192.168.0.100.          be present on a network and should be investigated 🟡 Low 
+                                                                      .    
  
 Risk level key: 🔴 Critical · 🟠 Medium · 🟡 Low 
  
