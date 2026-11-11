@@ -1,10 +1,10 @@
-<img width="1917" height="518" alt="Screenshot 2026-11-08 234930" src="https://github.com/user-attachments/assets/1aee41de-01e7-445d-9234-98d7e875b419" /># Internship-B084---WK2-Penetration-testing-report
+<img width="1915" height="909" alt="Screenshot 2026-11-08 233358" src="https://github.com/user-attachments/assets/45e5da6f-6a98-439b-a3de-103756aeb16d" /><img width="1915" height="909" alt="Screenshot 2026-11-08 233358" src="https://github.com/user-attachments/assets/aea5a340-1778-48c0-9a9c-424029eea8e4" /><img width="1917" height="518" alt="Screenshot 2026-11-08 234930" src="https://github.com/user-attachments/assets/1aee41de-01e7-445d-9234-98d7e875b419" /># Internship-B084---WK2-Penetration-testing-report
 This is my Second  project on github for the networkwalks Internship B084 - WK2 program
 PENETRATION TESTING REPORT 
 
 FOOTPRINTING, RECONNAISSANCE AND NETWORK SCANNING 
  
-W2-PM-FINAL | CYBERSECURITY |  NETWORKWALKS 
+"W2-PM-FINAL | CYBERSECURITY |  NETWORKWALKS" 
 
 Report information: 
 Pentester/Author: Olusoji Samuel 
@@ -20,22 +20,23 @@ Modules: W2-PM1 (6 Kali Tools)
          W2-PM5((Zenmap Scanning) 
 Assessment status: Reconnaissance and host discovery completed 
 
-1. Liability Disclaimer 
+1. **Liability Disclaimer**
 I carried out the activities documented in this report for educational and cybersecurity training purposes. The assessment of the local network was performed within my own lab environment. 
 Testing of the external domain, networkwalks.com, must only be conducted within the scope of permission granted by the domain owner or authorized organization. All activities should remain within the approved scope. 
 The information in this report is intended for learning, research and security improvement. It should not be used to gain unauthorized access to any system or network. Unauthorized access may have legal consequences, even where no damage is caused.  
 
-2. Introduction 
+
+**2. Introduction**
 
 This report covers the practical activities I carried out during the footprinting, reconnaissance and network scanning phases of my cybersecurity training. 
 The first part focused on gathering publicly available information about the domain networkwalks.com using different Kali Linux tools. I used WHOIS, WhatWeb, Nslookup, Curl, WAFW00F and DNSRecon to understand the domain registration details, website technologies, HTTP response headers, DNS records and Web Application Firewall information. 
 The second part focused on scanning my own local network. I used Nmap to identify active devices and check which IP addresses were responding on the network. The scan covered 256 IP addresses and identified two active hosts. One of the devices, 192.168.0.100, was identified as my Windows laptop, while 192.168.0.1 was likely the network gateway. 
 The main purpose of these exercises was to understand how information can be collected from a website and how devices connected to a network can be discovered before carrying out further security assessments. 
 
-3. TOOLS USED 
+**3. TOOLS USED **
 The following tools were used during the practical activities. 
 
-Tool:
+**Tool:**
 Kali Linux: Operating system used for the reconnaissance exercises 
 Windows 11: Operating system used for the local network environment 
 WHOIS: To obtain domain registration and nameserver information 
@@ -47,18 +48,19 @@ DNSRecon:To enumerate DNS records and identify DNS-related information
 Nmap:To discover active hosts on the local network 
 
 
-4. Activities Performed 
+**4. Activities Performed**
 
-4.1 Footprinting and Reconnaissance 
+**4.1 "Footprinting and Reconnaissance"**
 
 For this activity, I used six tools in Kali Linux to collect information about networkwalks.com. Each tool provided a different type of information, which helped me build a clearer picture of the website and its publicly visible infrastructure. 
 
-4.1.1 WHOIS Lookup 
+**4.1.1 WHOIS Lookup**
 Objective: To obtain publicly available domain registration information and identify the domain's registrar and nameservers. 
-Command used: 
+
+**Command used**: 
 whois networkwalks.com 
  
-Observations:  
+**Observations:  **
 The WHOIS lookup returned the following information: 
 
 Domain name: NETWORKWALKS.COM 
@@ -70,16 +72,16 @@ Registrant privacy service: Domains By Proxy, LLC
 DNSSEC: Unsigned 
 The lookup also returned nameserver information. The results contained HostGator nameservers as well as DomainControl nameservers in different sections of the WHOIS output. 
  
-Security significance: 
+**Security significance: **
 WHOIS information helps security professionals understand the registration history and some of the infrastructure associated with a domain. It can also reveal information that may be useful during the reconnaissance stage. 
 The use of a domain privacy service is a normal privacy measure and should not be treated as a security weakness. The different nameserver entries should be checked against the current authoritative DNS delegation before drawing any conclusion. 
  
-4.1.2 WhatWeb Scan 
-Objective: To identify the technologies and applications used by the website. 
-Command used: 
+**4.1.2 WhatWeb Scan **
+**Objective: To identify the technologies and applications used by the website. 
+Command used: **
 whatweb networkwalks.com 
- 
-Observations: 
+ **
+Observations:** 
 WhatWeb identified the following technologies and information: 
 
 Web server: Apache 
@@ -93,37 +95,37 @@ Open Graph metadata
 Website IP address: 192.232.216.135 
 The scan also identified a cookie named __wpdm_client with the HttpOnly attribute. 
 
-Security significance: 
+**Security significance: **
 Identifying the CMS, plugins and other technologies helps a security professional understand the software running on a website. 
 This information may help an attacker identify technologies that could require further investigation. However, the versions detected by WhatWeb do not automatically mean that the website is vulnerable. They would need to be checked against reliable security advisories and confirmed through authorized testing. 
 
 
-4.1.3 Nslookup 
+**4.1.3 Nslookup **
 Objective: To resolve the domain name and identify its associated IP address. 
 
 Command used: 
 nslookup networkwalks.com 
 
-Observations: 
+**Observations: **
 The lookup used Google's public DNS resolver: 
 DNS server: 8.8.8.8 
 Domain: networkwalks.com 
 Resolved IP address: 192.232.216.135 
 The result was returned as a non-authoritative answer. 
 
-Security significance: 
+**Security significance: **
 Nslookup helped me understand how a domain name is translated into an IP address. This is useful during reconnaissance because it helps identify the public IP address associated with a website. 
 The IP address was also consistent with the address identified during the WhatWeb scan. 
  
  
  
-4.1.4 Curl HTTP Header Inspection 
-Objective: To inspect the HTTP response headers returned by the website. 
+**4.1.4 Curl HTTP Header Inspection 
+**Objective: To inspect the HTTP response headers returned by the website. 
 
 Command used: 
 curl -I https://networkwalks.com 
 
-Observations: 
+**Observations:** 
 The website returned an HTTP/2 200 response, which indicates that the request was successful. 
 
 Some of the information returned included: 
@@ -136,8 +138,8 @@ Cookie: __wpdm_client
 Cookie attributes: Secure and HttpOnly 
 Cache-related headers: x-endurance-cache-level and x-nginx-cache 
 The response did not show an explicit SameSite attribute on the cookie. I also did not observe HSTS, Content-Security-Policy or X-Content-Type-Options in this particular response. 
-
-Security significance: 
+**
+Security significance: **
 HTTP response headers provide useful information about how a web application communicates with browsers. They can also reveal technical details about the website. 
 The WordPress REST API endpoint is a normal WordPress feature, but its publicly available information should still be reviewed to ensure that sensitive information is not exposed. 
 The absence of certain security headers in this response suggests areas that may require further review. It does not, by itself, confirm that the website is vulnerable. 
@@ -149,24 +151,24 @@ Objective: To identify whether a Web Application Firewall is protecting the webs
 Command used: 
 wafw00f https://networkwalks.com 
 
-Observations: 
+**Observations: **
 The scan identified the following: 
 Web Application Firewall: ModSecurity 
 Provider/fingerprint: SpiderLabs 
 Number of requests: 2 
 
-Security significance: 
+**Security significance: **
 The result indicates that the website is behind a Web Application Firewall identified as ModSecurity. 
 A WAF can help monitor and filter suspicious web requests. Its effectiveness depends on its configuration, rules and maintenance. Identifying the WAF does not confirm how effectively it protects the website or whether all attacks would be blocked. 
  
 
-4.1.6 DNSRecon 
+**4.1.6 DNSRecon **
 Objective: To enumerate DNS records and collect additional information about the domain's DNS infrastructure. 
 
 Command used: 
 dnsrecon -d networkwalks.com 
 
-Observations: 
+**Observations: **
 DNSRecon returned eight records and identified the following information: 
 SOA nameserver: ns6135.hostgator.com 
 Nameservers: ns6135.hostgator.com and ns6136.hostgator.com 
@@ -184,7 +186,7 @@ The BIND version fingerprint provides information about the DNS software. This s
 The SPF record uses ~all, which represents a soft-fail policy. The organization should review whether the record correctly covers all legitimate email-sending services.The DNSSEC result also suggests an opportunity to review whether DNSSEC should be enabled.The nameserver information should be compared with the WHOIS delegation to confirm that the records are consistent. 
  
 
-4.2 Network Scanning and Discovery Using Nmap 
+**4.2 Network Scanning and Discovery Using Nmap **
 For the second activity, I used Nmap to identify active devices on my local network. 
 
 The aim was to discover which devices were responding and obtain basic information about the hosts found during the scan. 
@@ -193,7 +195,7 @@ Tool used: Nmap 7.993
 Scan output: 
 The scan reported that 256 IP addresses were scanned and two hosts were up. 
 The results identified: 
-
+ 
 IP address            | Device identification           | Status 
 ______________________________________________________________________
 192.168.0.1            Likely router/network gateways.    Host up
@@ -229,7 +231,7 @@ Based on the information collected during the footprinting and network scanning 
 1. Web technology            WhatWeb identified WordPress and         Attackers may use exposed technology and
    information exposed       WordPress Download Manager.              version information to identify software       🟠Medium 
                                                                       requiring further security review.  _______________________________________________________________________________________________________________________________________________2. Server IP address         Nslookup resolved the domain             Provides information about the                 🟡 Low 
-   identifiable              to 192.232.216.135.                      network location of the web service.  _______________________________________________________________________________________________________________________________________________
+   identifiable              to 192.232.216.135.                      network location of the web service.  __________________________________________________________________________________________________________
 3. HTTP technical            Curl returned HTTP response              May assist technology fingerprinting           🟡 Low
    information exposed       headers and WordPress REST API links.    and further enumeration. _______________________________________________________________________________________________________________________________________________
 4. WAF technology            WAFW00F identified ModSecurity           Reveals information about the web              🟡 Low 
