@@ -198,10 +198,10 @@ The results identified:
  
 IP address            | Device identification           | Status 
 ______________________________________________________________________
-192.168.0.1            Likely router/network gateways.    Host up
+192.168.0.1              Likely router/network gateways.    Host up
 _______________________________________________________________________
-192.168.0.100           My Windows laptop                 Host up 
-_______________________________________________________________________
+192.168.0.100            My Windows laptop                 Host up 
+______________________________________________________________________
 
 The scan also returned the following information for the gateway: 
 
@@ -230,20 +230,26 @@ Based on the information collected during the footprinting and network scanning 
  
 1. Web technology            WhatWeb identified WordPress and         Attackers may use exposed technology and
    information exposed       WordPress Download Manager.              version information to identify software       🟠Medium 
-                                                                      requiring further security review.  _______________________________________________________________________________________________________________________________________________2. Server IP address         Nslookup resolved the domain             Provides information about the                 🟡 Low 
-   identifiable              to 192.232.216.135.                      network location of the web service.  __________________________________________________________________________________________________________
+                                                                      requiring further security review.  _
+2. Server IP address         Nslookup resolved the domain             Provides information about the                 🟡 Low 
+   identifiable              to 192.232.216.135.                      network location of the web service.  
+   
 3. HTTP technical            Curl returned HTTP response              May assist technology fingerprinting           🟡 Low
-   information exposed       headers and WordPress REST API links.    and further enumeration. _______________________________________________________________________________________________________________________________________________
+   information exposed       headers and WordPress REST API links.    and further enumeration. 
+   
 4. WAF technology            WAFW00F identified ModSecurity           Reveals information about the web              🟡 Low 
-   identifiable              (SpiderLabs).                            application's security architecture.   _______________________________________________________________________________________________________________________________________________
+   identifiable              (SpiderLabs).                            application's security architecture.
+   
 5. DNSSEC not detected       WHOIS and DNSRecon results indicated     If DNSSEC is not configured, DNS               🟠 Medium 
                              that DNSSEC was unsigned or returned     responses may lack DNSSEC validation 
-                             no answer                                protection.           _______________________________________________________________________________________________________________________________________________
+                             no answer                                protection.           
+                             
 6. DNS infrastructure        DNSRecon identified DNS, mail            DNS information can help build a               🟠 Medium 
-   information exposed       and service-related records.             broader infrastructure profile.               _______________________________________________________________________________________________________________________________________________
+   information exposed       and service-related records.             broader infrastructure profile.               
+   
 7. Multiple live hosts        Zenmap identified two active hosts:     Unknown or unauthorised devices may
    visible on local network   192.168.0.1 and 192.168.0.100.          be present on a network and should be           🟡 Low 
-                                                                      investigated.      _______________________________________________________________________________________________________________________________________________
+                                                                      investigated.    
  
 Risk level key: 🔴 Critical · 🟠 Medium · 🟡 Low 
  
