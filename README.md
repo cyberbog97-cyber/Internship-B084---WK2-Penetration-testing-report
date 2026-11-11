@@ -1,4 +1,4 @@
-<img width="1915" height="909" alt="Screenshot 2026-11-08 233358" src="https://github.com/user-attachments/assets/45e5da6f-6a98-439b-a3de-103756aeb16d" /><img width="1915" height="909" alt="Screenshot 2026-11-08 233358" src="https://github.com/user-attachments/assets/aea5a340-1778-48c0-9a9c-424029eea8e4" /><img width="1917" height="518" alt="Screenshot 2026-11-08 234930" src="https://github.com/user-attachments/assets/1aee41de-01e7-445d-9234-98d7e875b419" /># Internship-B084---WK2-Penetration-testing-report
+# Internship-B084---WK2-Penetration-testing-report
 This is my Second  project on github for the networkwalks Internship B084 - WK2 program
 PENETRATION TESTING REPORT 
 
