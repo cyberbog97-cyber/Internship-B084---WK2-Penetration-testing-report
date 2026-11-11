@@ -228,11 +228,11 @@ Based on the information collected during the footprinting and network scanning 
 
 #   Risk/Finding            | Evidence/Observation                  |    Potential Impact                       |  Risk level 
  
-1. Web technology            WhatWeb identified WordPress and         Attackers may use exposed technology and
-   information exposed       WordPress Download Manager.              version information to identify software       🟠Medium 
+1. Web technology information exposed WhatWeb identified WordPress and  WordPress Download Manage       Attackers may use exposed technology and
+         r.              version information to identify software       🟠Medium 
                                                                       requiring further security review.  _
-2. Server IP address         Nslookup resolved the domain             Provides information about the                 🟡 Low 
-   identifiable              to 192.232.216.135.                      network location of the web service.  
+2. Server IP address identifiable    Nslookup resolved the domain to 192.232.216.135.   Provides information about the  network location of the web service. 🟡 Low 
+                                      
    
 3. HTTP technical            Curl returned HTTP response              May assist technology fingerprinting           🟡 Low
    information exposed       headers and WordPress REST API links.    and further enumeration. 
