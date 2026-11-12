@@ -209,9 +209,8 @@ The aim was to discover which devices were responding and obtain basic informati
 
 Tool used: Nmap 7.993 
 Scan output: 
-The scan reported that 256 IP addresses were scanned and two hosts were up. 
+The scan reported that 256 IP addresses were scanned and two hosts were up.
 The results identified: 
-  
 ______________________________________________________________________
 * IP address: 192.168.0.1
 * Device identification: Likely router/network gateways.
@@ -266,17 +265,17 @@ Based on the information collected during the footprinting and network scanning 
 * Impact:Reveals information about the web application's security architecture.                                                                  
 * Risk level:🟡 Low .                                                                                                                             
 **5. DNSSEC not detected.**                                                                                                                            
-* Observation:WHOIS and DNSRecon results indicated that DNSSEC was unsigned or returned no answer.                                                 
-* Impact:If DNSSEC is not configured, responses may lack DNSSEC validation protection DNS.                                                       
-* Risk level:🟠 Medium.                                                                                                                                                              
+ * Observation:WHOIS and DNSRecon results indicated that DNSSEC was unsigned or returned no answer.                                                 
+ * Impact:If DNSSEC is not configured, responses may lack DNSSEC validation protection DNS.                                                       
+ * Risk level:🟠 Medium.                                                                                                                                                              
 **6. DNS infrastructure information exposed**.                                                                                                                                                                                                                                               
-* Observaation:DNSRecon identified DNS, mail and service-related records.                                                                                         
-* Impact:DNS information can help build a  broader infrastructure profile.                                                                        
-* Risk leve:🟠 Medium                                                                                                                                                    
-**7. Multiple live hosts visible on local network**.                                                                                                
-* Observation:Zenmap identified two active hosts: 192.168.0.1 and 192.168.0.100.                                                                  
-* Impact:Unknown or unauthorised devices may be present on a network and should be investigated.                                                   
-* Risk level🟡low                                                                                                                               
+ * Observaation:DNSRecon identified DNS, mail and service-related records.                                                                                         
+ * Impact:DNS information can help build a  broader infrastructure profile.                                                                        
+ * Risk leve:🟠 Medium                                                                                                                                    
+**7. Multiple live hosts visible on local network**.                                                                                            
+ * Observation:Zenmap identified two active hosts: 192.168.0.1 and 192.168.0.100.                                                                  
+ * Impact:Unknown or unauthorised devices may be present on a network and should be investigated.                                                    
+ * Risk level🟡low                                                                                                                               
 Risk level key: 🔴 Critical · 🟠 Medium · 🟡 Low                                                                                              
 The findings presented above reflect information gathered during the reconnaissance and network scanning exercises. They highlight possible areas that may require further security review rather than confirmed vulnerabilities. 
 Both practical tasks focused on collecting technical information and identifying active devices on the network. No penetration attempts or vulnerability testing were carried out. 
