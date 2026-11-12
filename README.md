@@ -102,7 +102,8 @@ WhatWeb identified the following technologies and information:
 * Bootstrap fingerprint
 * HTML5
 * Open Graph metadata
-* Website IP address: 192.232.216.135                   
+* Website IP address: 192.232.216.135           
+
 The scan also identified a cookie named __wpdm_client with the HttpOnly attribute. 
 
 **Security significance:**
@@ -148,6 +149,7 @@ Some of the information returned included:
 * Cookie: __wpdm_client 
 * Cookie attributes: Secure and HttpOnly 
 * Cache-related headers: x-endurance-cache-level and x-nginx-cache 
+
 The response did not show an explicitSameSite attribute on the cookie. I also did not observe HSTS, Content-Security-Policy or X-Content-Type-Options in this particular response. 
 
 **Security significance:**
@@ -209,12 +211,15 @@ Tool used: Nmap 7.993
 Scan output: 
 The scan reported that 256 IP addresses were scanned and two hosts were up. 
 The results identified: 
- 
-IP address            | Device identification           | Status 
+  
 ______________________________________________________________________
-192.168.0.1              Likely router/network gateways.    Host up
+* IP address: 192.168.0.1
+* Device identification: Likely router/network gateways.
+* Status: Host up
 _______________________________________________________________________
-192.168.0.100            My Windows laptop                 Host up 
+* IP address: 192.168.0.100
+* Device identification: My Windows laptop
+* Status: Host up 
 ______________________________________________________________________
 
 The scan also returned the following information for the gateway: 
