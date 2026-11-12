@@ -95,23 +95,14 @@ whatweb networkwalks.com
 
 WhatWeb identified the following technologies and information:
 * Web server:Apache
-
 * Website platform: WordPress 7.1.4
-
 * WordPress Download Manager: 3.3.76
-
 * jQuery: 3.7.1
-
 * Google Tag Manager
-
 * Bootstrap fingerprint
-
 * HTML5
-
 * Open Graph metadata
-
-* Website IP address: 192.232.216.135
-
+* Website IP address: 192.232.216.135                   
 The scan also identified a cookie named __wpdm_client with the HttpOnly attribute. 
 
 **Security significance:**
@@ -128,13 +119,10 @@ nslookup networkwalks.com
 **Observations:**
 The lookup used Google's public DNS resolver:
 
-*DNS server: 8.8.8.8 
-
-*Domain: networkwalks.com 
-
-*Resolved IP address: 192.232.216.135 
-
-*The result was returned as a non-authoritative answer. 
+* DNS server: 8.8.8.8 
+* Domain: networkwalks.com 
+* Resolved IP address: 192.232.216.135 
+* The result was returned as a non-authoritative answer. 
 
 **Security significance:**
 Nslookup helped me understand how a domain name is translated into an IP address. This is useful during reconnaissance because it helps identify the public IP address associated with a website. 
@@ -151,22 +139,15 @@ curl -I https://networkwalks.com
 **Observations:** 
 The website returned an HTTP/2 200 response, which indicates that the request was successful. 
 Some of the information returned included: 
-*Server: Apache 
 
-*Content type: text/html; charset=UTF-8 
-
-*Referrer-Policy: no-referrer-when-downgrade 
-
-*WordPress REST API endpoint: /wp-json/ 
-
-*WordPress page endpoint: /wp-json/wp/v2/pages/53 
-
-*Cookie: __wpdm_client 
-
-*Cookie attributes: Secure and HttpOnly 
-
-*Cache-related headers: x-endurance-cache-level and x-nginx-cache 
-
+* Server: Apache 
+* Content type: text/html; charset=UTF-8 
+* Referrer-Policy: no-referrer-when-downgrade 
+* WordPress REST API endpoint: /wp-json/ 
+* WordPress page endpoint: /wp-json/wp/v2/pages/53 
+* Cookie: __wpdm_client 
+* Cookie attributes: Secure and HttpOnly 
+* Cache-related headers: x-endurance-cache-level and x-nginx-cache 
 The response did not show an explicitSameSite attribute on the cookie. I also did not observe HSTS, Content-Security-Policy or X-Content-Type-Options in this particular response. 
 
 **Security significance:**
@@ -184,11 +165,9 @@ wafw00f https://networkwalks.com
 **Observations:**
 The scan identified the following:
 
-Web Application Firewall: ModSecurity 
-
-Provider/fingerprint: SpiderLabs 
-
-Number of requests: 2 
+* Web Application Firewall: ModSecurity 
+* Provider/fingerprint: SpiderLabs 
+* Number of requests: 2 
 
 **Security significance:**
 The result indicates that the website is behind a Web Application Firewall identified as ModSecurity. 
@@ -204,21 +183,14 @@ dnsrecon -d networkwalks.com
 **Observations:**
 DNSRecon returned eight records and identified the following information:
 
-*SOA nameserver: ns6135.hostgator.com 
-
-*Nameservers: ns6135.hostgator.com and ns6136.hostgator.com 
-
-*Mail server: mail.networkwalks.com 
-
-*Website IP address: 192.232.216.135 
-
-*BIND version fingerprint: 9.16.23-RH 
-
-*Google site verification TXT record 
-
-*SPF record: v=spf1 +a +mx +ip4:50.87.144.87 +include:websitewelcome.com ~all 
-
-*cPanel email discovery service record 
+* SOA nameserver: ns6135.hostgator.com 
+* Nameservers: ns6135.hostgator.com and ns6136.hostgator.com 
+* Mail server: mail.networkwalks.com 
+* Website IP address: 192.232.216.135 
+* BIND version fingerprint: 9.16.23-RH 
+* Google site verification TXT record 
+* SPF record: v=spf1 +a +mx +ip4:50.87.144.87 +include:websitewelcome.com ~all 
+* cPanel email discovery service record 
 
 DNSRecon also returned an error indicating that it could not obtain an answer to the DNSSEC query. This is consistent with the unsigned DNSSEC status observed in the WHOIS results. 
 
@@ -247,17 +219,12 @@ ______________________________________________________________________
 
 The scan also returned the following information for the gateway: 
 
-*IP address: 192.168.0.1 
-
-*MAC address: E4:7D:EB:26:5E:95
-
-*MAC vendor identification: Shanghai Notion Information Technology 
-
-*Response time: 0.014 seconds 
-
-*The second active host, 192.168.0.100, was identified as my Windows laptop. 
-
-*The scan completed in 5.31 seconds. 
+* IP address: 192.168.0.1 
+* MAC address: E4:7D:EB:26:5E:95
+* MAC vendor identification: Shanghai Notion Information Technology 
+* Response time: 0.014 seconds 
+* The second active host, 192.168.0.100, was identified as my Windows laptop. 
+* The scan completed in 5.31 seconds. 
 
 **Security significance:** 
 Nmap helped me identify devices that were active on my local network. This is an important part of network discovery because security professionals need to understand which devices are connected before carrying out further assessments. 
