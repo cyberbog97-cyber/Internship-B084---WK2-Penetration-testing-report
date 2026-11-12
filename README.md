@@ -27,7 +27,7 @@ This is my Second  project on github for the networkwalks Internship B084 - WK2 
 
 **Modules**:W2-PM1 (6 Kali Tools);W2-PM5((Zenmap Scanning)
 
-**Assessment status**: Reconnaissance and host discovery completed                                                                                  
+**Assessment status**: Reconnaissance and host discovery completed                                                                                                                                                                                                                                                                                                                                                                           
 # 1. Liability Disclaimer
 I carried out the activities documented in this report for educational and cybersecurity training purposes. The assessment of the local network was performed within my own lab environment. 
 Testing of the external domain, networkwalks.com, must only be conducted within the scope of permission granted by the domain owner or authorized organization. All activities should remain within the approved scope. 
