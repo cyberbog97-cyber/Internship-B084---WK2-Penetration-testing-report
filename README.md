@@ -1,10 +1,8 @@
 # Internship-B084---WK2-Penetration-testing-report
-# This is my Second  project on github for the networkwalks Internship B084 - WK2 program
-# PENETRATION TESTING REPORT 
-
-# FOOTPRINTING, RECONNAISSANCE AND NETWORK SCANNING 
- 
-# W2-PM-FINAL | CYBERSECURITY |  NETWORKWALKS
+This is my Second  project on github for the networkwalks Internship B084 - WK2 program                                                              
+**PENETRATION TESTING REPORT**
+**FOOTPRINTING, RECONNAISSANCE AND NETWORK SCANNING**
+**W2-PM-FINAL | CYBERSECURITY |  NETWORKWALKS**
 
 **Report information**: 
 **Pentester/Author:** Olusoji Samuel 
@@ -84,8 +82,7 @@ Command used: **
 whatweb networkwalks.com 
  **
 Observations:** 
-WhatWeb identified the following technologies and information: 
-
+WhatWeb identified the following technologies and information:
 *Web server:Apache
 *Website platform: WordPress 7.1.4
 *WordPress Download Manager: 3.3.76
@@ -110,9 +107,13 @@ nslookup networkwalks.com
 
 **Observations:**
 The lookup used Google's public DNS resolver:
+
 *DNS server: 8.8.8.8 
+
 *Domain: networkwalks.com 
+
 *Resolved IP address: 192.232.216.135 
+
 *The result was returned as a non-authoritative answer. 
 
 **Security significance:**
@@ -131,13 +132,21 @@ curl -I https://networkwalks.com
 The website returned an HTTP/2 200 response, which indicates that the request was successful. 
 Some of the information returned included: 
 *Server: Apache 
+
 *Content type: text/html; charset=UTF-8 
+
 *Referrer-Policy: no-referrer-when-downgrade 
+
 *WordPress REST API endpoint: /wp-json/ 
+
 *WordPress page endpoint: /wp-json/wp/v2/pages/53 
+
 *Cookie: __wpdm_client 
+
 *Cookie attributes: Secure and HttpOnly 
+
 *Cache-related headers: x-endurance-cache-level and x-nginx-cache 
+
 The response did not show an explicitSameSite attribute on the cookie. I also did not observe HSTS, Content-Security-Policy or X-Content-Type-Options in this particular response. 
 
 **Security significance:**
@@ -153,9 +162,12 @@ The absence of certain security headers in this response suggests areas that may
 wafw00f https://networkwalks.com 
 
 **Observations:**
-The scan identified the following: 
+The scan identified the following:
+
 Web Application Firewall: ModSecurity 
+
 Provider/fingerprint: SpiderLabs 
+
 Number of requests: 2 
 
 **Security significance:**
@@ -207,10 +219,15 @@ ______________________________________________________________________
 The scan also returned the following information for the gateway: 
 
 *IP address: 192.168.0.1 
-*MAC address: E4:7D:EB:26:5E:95 
+
+*MAC address: E4:7D:EB:26:5E:95
+
 *MAC vendor identification: Shanghai Notion Information Technology 
+
 *Response time: 0.014 seconds 
+
 *The second active host, 192.168.0.100, was identified as my Windows laptop. 
+
 *The scan completed in 5.31 seconds. 
 
 **Security significance:** 
