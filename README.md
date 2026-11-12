@@ -226,40 +226,46 @@ Based on the information collected during the footprinting and network scanning 
  
 
 
-#   Risk/Finding            | Evidence/Observation                  |    Potential Impact                       |  Risk level 
+#   Risk/Finding             | Evidence/Observation                  |    Potential Impact                       |  Risk level 
  
-1. Web technology information exposed WhatWeb identified WordPress and  WordPress Download Manage       Attackers may use exposed technology and
-         r.              version information to identify software       🟠Medium 
-                                                                      requiring further security review.  _
-2. Server IP address identifiable    Nslookup resolved the domain to 192.232.216.135.   Provides information about the  network location of the web service. 🟡 Low 
-                                      
+# 1. Web technology information exposed                                                                                                         
+*Observation: WhatWeb identified WordPress and WordPress Download Manage                                                                               
+*Impact Attackers may use exposed technology and version information to identify software requiring further security review.                       
+*Risk level:🟠Medium 
+                                                                                                                                                
+# 2. Server IP address identifiable.                                                                                                                  
+Observation:Nslookup resolved the domain to 192.232.216.135.|                                                                                      
+Impact:Provides information about the  network location of the web service.|                                                                    
+Risk level:🟡 Low.                                                                                                                               
+                                                                                                                                               
+# 3. HTTP technical information exposed.|                                                                                                                      
+*Obsevation:Curl returned HTTP response headers and WordPress REST API links.|                                                                        
+*Impact:May assist technology fingerprinting and further enumeration.|                                                                          
+*Risk level:🟡 Low.  
+                                                                                                                                                                                
    
-3. HTTP technical            Curl returned HTTP response              May assist technology fingerprinting           🟡 Low
-   information exposed       headers and WordPress REST API links.    and further enumeration. 
-   
-4. WAF technology            WAFW00F identified ModSecurity           Reveals information about the web              🟡 Low 
-   identifiable              (SpiderLabs).                            application's security architecture.
-   
-5. DNSSEC not detected     WHOIS and DNSRecon results indicated           If DNSSEC is not configured, DNS               🟠 Medium 
-                          that DNSSEC was unsigned or returned no answer  responses may lack DNSSEC validation protection
-                             .           
-                             
-6. DNS infrastructure        DNSRecon identified DNS, mail            DNS information can help build a               🟠 Medium 
-   information exposed       and service-related records.             broader infrastructure profile.               
-   
-7. Multiple live hosts        Zenmap identified two active hosts:     Unknown or unauthorised devices may
-   visible on local network   192.168.0.1 and 192.168.0.100.          be present on a network and should be investigated 🟡 Low 
-                                                                      .    
- 
-Risk level key: 🔴 Critical · 🟠 Medium · 🟡 Low 
- 
+# 4. WAF technology identifiable.                                                                                                                   
+*Observation:WAFW00F identified ModSecurity (SpiderLabs).                                                                                       
+*Impact:Reveals information about the web application's security architecture.                                                                  
+*Risk level:🟡 Low .                                                                                                                             
+# 5. DNSSEC not detected.                                                                                                                            
+*Observation:WHOIS and DNSRecon results indicated that DNSSEC was unsigned or returned no answer.                                                 
+*Impact:If DNSSEC is not configured, responses may lack DNSSEC validation protection DNS.                                                       
+*Risk level:🟠 Medium.                                                                                                                                                              
+# 6. DNS infrastructure information exposed.                                                                                                                                                                                                                                                    
+*Observaation:DNSRecon identified DNS, mail and service-related records.                                                                                         
+*Impact:DNS information can help build a  broader infrastructure profile.                                                                        
+*Risk leve:🟠 Medium                                                                                                                                                    
+# 7. Multiple live hosts visible on local network.                                                                                                
+*Observation:Zenmap identified two active hosts: 192.168.0.1 and 192.168.0.100.                                                                  
+*Impact:Unknown or unauthorised devices may be present on a network and should be investigated.                                                   
+*Risk level🟡low                                                                                                                               
+Risk level key: 🔴 Critical · 🟠 Medium · 🟡 Low                                                                                              
 The findings presented above reflect information gathered during the reconnaissance and network scanning exercises. They highlight possible areas that may require further security review rather than confirmed vulnerabilities. 
 Both practical tasks focused on collecting technical information and identifying active devices on the network. No penetration attempts or vulnerability testing were carried out. 
-It is important to note that identifying software versions, IP addresses or DNS records does not automatically indicate a security weakness. Additional authorised testing would be needed to determine whether any of these observations present an actual security risk. 
-
+It is important to note that identifying software versions, IP addresses or DNS records does not automatically indicate a security weakness. Additional authorised testing would be needed to determine whether any of these observations present an actual security risk.                   
 6. Recommendations 
-Based on the findings from the practical activities, I recommend the following security improvements: 
-
+Based on the findings from the practical activities, I recommend the following security improvements:                                           
 1. Review publicly exposed website technologies 
    Organizations should regularly review the technologies, CMS platforms and plugins that are publicly identifiable on their websites.            Unnecessary information should be limited where possible. 
 2. Keep website software updated 
