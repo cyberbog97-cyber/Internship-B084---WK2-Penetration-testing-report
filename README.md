@@ -5,19 +5,29 @@ This is my Second  project on github for the networkwalks Internship B084 - WK2 
 **W2-PM-FINAL | CYBERSECURITY |  NETWORKWALKS**
 
 **Report information**: 
+
 **Pentester/Author:** Olusoji Samuel 
+
 **Programme/Batch:** B084D-Networkwalks 
+
 **Report date:**  9 November 2026 
+
 **Target website:** networkwalks.com 
+
 **Local network assessed:** My local LAN 
-**Approval for Testing Obtained:** Yes- Consent was obtained before conducting the exercis 
+
+**Approval for Testing Obtained:** Yes- Consent was obtained before conducting the exercise
+
 **Operating system used:** Kali Linux and Windows 
+
 **Phases covered**:
+
 **Phase 1**: Reconnaissance and Footprinting; 
+
 **Phase 2**: Network Scanning and Discovery 
-**Modules**:
-W2-PM1 (6 Kali Tools) 
-W2-PM5((Zenmap Scanning) 
+
+**Modules**:W2-PM1 (6 Kali Tools);W2-PM5((Zenmap Scanning)
+
 **Assessment status**: Reconnaissance and host discovery completed 
 
 1. **Liability Disclaimer**
