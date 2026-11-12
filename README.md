@@ -285,6 +285,7 @@ Based on the information collected during the footprinting and network scanning 
 
    
    Risk level key: 🔴 Critical · 🟠 Medium · 🟡 Low                                                                                              
+   
 The findings presented above reflect information gathered during the reconnaissance and network scanning exercises. They highlight possible areas that may require further security review rather than confirmed vulnerabilities. 
 Both practical tasks focused on collecting technical information and identifying active devices on the network. No penetration attempts or vulnerability testing were carried out. 
 It is important to note that identifying software versions, IP addresses or DNS records does not automatically indicate a security weakness. Additional authorised testing would be needed to determine whether any of these observations present an actual security risk.                                                                                                                                                                                   
