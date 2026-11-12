@@ -261,16 +261,16 @@ Based on the information collected during the footprinting and network scanning 
 **4. WAF technology identifiable.**                                                                                                                  
 * Observation:WAFW00F identified ModSecurity (SpiderLabs).                                                                                       
 * Impact:Reveals information about the web application's security architecture.                                                                  
-* Risk level:🟡 Low .                                                                                                                             
+* Risk level:🟡 Low .                                                                                                                          
 **5. DNSSEC not detected.**                                                                                                                         
  * Observation:WHOIS and DNSRecon results indicated that DNSSEC was unsigned or returned no answer.                                                 
  * Impact:If DNSSEC is not configured, responses may lack DNSSEC validation protection DNS.                                                       
- * Risk level:🟠 Medium.                                                                                                                                                               
-**6. DNS infrastructure information exposed**.                                                                                                                                                                                                                                               
+ * Risk level:🟠 Medium.                                                                                                                       
+ **6. DNS infrastructure information exposed**.                                                                                                                                                                                                                                               
  * Observaation:DNSRecon identified DNS, mail and service-related records.                                                                                         
  * Impact:DNS information can help build a  broader infrastructure profile.                                                                        
- * Risk leve:🟠 Medium                                                                                                                                
-**7. Multiple live hosts visible on local network**.                                                                                            
+ * Risk leve:🟠 Medium                                                                                                                         
+ **7. Multiple live hosts visible on local network**.                                                                                            
  * Observation:Zenmap identified two active hosts: 192.168.0.1 and 192.168.0.100.                                                                  
  * Impact:Unknown or unauthorised devices may be present on a network and should be investigated.                                                    
  * Risk level🟡low                                                                                                                               
