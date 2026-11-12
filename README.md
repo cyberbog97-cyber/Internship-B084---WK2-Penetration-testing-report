@@ -28,15 +28,12 @@ This is my Second  project on github for the networkwalks Internship B084 - WK2 
 
 **Modules**:W2-PM1 (6 Kali Tools);W2-PM5((Zenmap Scanning)
 
-**Assessment status**: Reconnaissance and host discovery completed 
-
-1. **Liability Disclaimer**
+**Assessment status**: Reconnaissance and host discovery completed                                                                                  
+# 1. Liability Disclaimer
 I carried out the activities documented in this report for educational and cybersecurity training purposes. The assessment of the local network was performed within my own lab environment. 
 Testing of the external domain, networkwalks.com, must only be conducted within the scope of permission granted by the domain owner or authorized organization. All activities should remain within the approved scope. 
-The information in this report is intended for learning, research and security improvement. It should not be used to gain unauthorized access to any system or network. Unauthorized access may have legal consequences, even where no damage is caused.  
-
-
-**2. Introduction**
+The information in this report is intended for learning, research and security improvement. It should not be used to gain unauthorized access to any system or network. Unauthorized access may have legal consequences, even where no damage is caused.                                         
+# 2. Introduction
 
 This report covers the practical activities I carried out during the footprinting, reconnaissance and network scanning phases of my cybersecurity training. 
 The first part focused on gathering publicly available information about the domain networkwalks.com using different Kali Linux tools. I used WHOIS, WhatWeb, Nslookup, Curl, WAFW00F and DNSRecon to understand the domain registration details, website technologies, HTTP response headers, DNS records and Web Application Firewall information. 
