@@ -182,15 +182,24 @@ A WAF can help monitor and filter suspicious web requests. Its effectiveness dep
 dnsrecon -d networkwalks.com 
 
 **Observations:**
-DNSRecon returned eight records and identified the following information: 
+DNSRecon returned eight records and identified the following information:
+
 *SOA nameserver: ns6135.hostgator.com 
+
 *Nameservers: ns6135.hostgator.com and ns6136.hostgator.com 
+
 *Mail server: mail.networkwalks.com 
+
 *Website IP address: 192.232.216.135 
+
 *BIND version fingerprint: 9.16.23-RH 
+
 *Google site verification TXT record 
+
 *SPF record: v=spf1 +a +mx +ip4:50.87.144.87 +include:websitewelcome.com ~all 
+
 *cPanel email discovery service record 
+
 DNSRecon also returned an error indicating that it could not obtain an answer to the DNSSEC query. This is consistent with the unsigned DNSSEC status observed in the WHOIS results. 
 
 **Security significance:**
