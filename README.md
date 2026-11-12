@@ -44,15 +44,15 @@ The main purpose of these exercises was to understand how information can be col
 The following tools were used during the practical activities. 
 
 **Tool:**
-**Kali linux**: Operating system used for the reconnaissance exercises 
-**Windows 11**: Operating system used for the local network environment 
-**WHOIS**: To obtain domain registration and nameserver information 
-**WhatWeb**:To identify website technologies, CMS and plugins 
-**Nslookup**: To resolve the domain name to its IP address 
-**Curl**:To inspect HTTP response headers 
-**WAFW00F**:To identify the Web Application Firewall protecting the website 
-**DNSRecon**:To enumerate DNS records and identify DNS-related information 
-**Nmap**:To discover active hosts on the local network 
+* Kali linux: Operating system used for the reconnaissance exercises
+* Windows 11: Operating system used for the local network environment 
+* WHOIS: To obtain domain registration and nameserver information 
+* WhatWeb:To identify website technologies, CMS and plugins 
+* Nslookup**: To resolve the domain name to its IP address 
+* Curl:To inspect HTTP response headers 
+* WAFW00F:To identify the Web Application Firewall protecting the website 
+* DNSRecon:To enumerate DNS records and identify DNS-related information 
+* Nmap:To discover active hosts on the local network 
 
 
 # 4. Activities Performed
@@ -70,19 +70,13 @@ whois networkwalks.com
 **Observations**:
 The WHOIS lookup returned the following information: 
 
-**Domain name:** NETWORKWALKS.COM 
-
-**Registrar**: GoDaddy.com, LLC 
-
-**Creation date**: 6 November 2019 
-
-**Registry expiry date**: 6 November 2027 
-
-**Last updated**: 12 November 2025 
-
-**Registrant privacy service**: Domains By Proxy, LLC 
-
-**DNSSEC**: Unsigned 
+* Domain name: NETWORKWALKS.COM 
+* Registrar: GoDaddy.com, LLC                                                                                                     
+* Creation date: 6 November 2019                                                                                              
+* Registry expiry date: 6 November 2027                                                                        
+* Last updated: 12 November 2025                                              
+* Registrant privacy service: Domains By Proxy, LLC                      
+* DNSSEC: Unsigned 
 
 The lookup also returned nameserver information. The results contained HostGator nameservers as well as DomainControl nameservers in different sections of the WHOIS output. 
  
@@ -96,27 +90,27 @@ The use of a domain privacy service is a normal privacy measure and should not b
 
 **Command used:**
 whatweb networkwalks.com 
- **
-Observations:** 
+
+**Observations:**
 
 WhatWeb identified the following technologies and information:
-*Web server:Apache
+* Web server:Apache
 
-*Website platform: WordPress 7.1.4
+* Website platform: WordPress 7.1.4
 
-*WordPress Download Manager: 3.3.76
+* WordPress Download Manager: 3.3.76
 
-*jQuery: 3.7.1
+* jQuery: 3.7.1
 
-*Google Tag Manager
+* Google Tag Manager
 
-*Bootstrap fingerprint
+* Bootstrap fingerprint
 
-*HTML5
+* HTML5
 
-*Open Graph metadata
+* Open Graph metadata
 
-*Website IP address: 192.232.216.135
+* Website IP address: 192.232.216.135
 
 The scan also identified a cookie named __wpdm_client with the HttpOnly attribute. 
 
