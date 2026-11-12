@@ -281,7 +281,9 @@ Based on the information collected during the footprinting and network scanning 
                                                                                                                                                        
    * Observation:Zenmap identified two active hosts: 192.168.0.1 and 192.168.0.100.                                                                  
    * Impact:Unknown or unauthorised devices may be present on a network and should be investigated.                                                    
-   * Risk level🟡low                                                                                                                                                                                                   
+   * Risk level🟡low            
+
+   
    Risk level key: 🔴 Critical · 🟠 Medium · 🟡 Low                                                                                              
 The findings presented above reflect information gathered during the reconnaissance and network scanning exercises. They highlight possible areas that may require further security review rather than confirmed vulnerabilities. 
 Both practical tasks focused on collecting technical information and identifying active devices on the network. No penetration attempts or vulnerability testing were carried out. 
