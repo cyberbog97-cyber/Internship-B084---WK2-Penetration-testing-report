@@ -71,12 +71,19 @@ whois networkwalks.com
 The WHOIS lookup returned the following information: 
 
 **Domain name:** NETWORKWALKS.COM 
+
 **Registrar**: GoDaddy.com, LLC 
+
 **Creation date**: 6 November 2019 
+
 **Registry expiry date**: 6 November 2027 
+
 **Last updated**: 12 November 2025 
+
 **Registrant privacy service**: Domains By Proxy, LLC 
+
 **DNSSEC**: Unsigned 
+
 The lookup also returned nameserver information. The results contained HostGator nameservers as well as DomainControl nameservers in different sections of the WHOIS output. 
  
 **Security significance**:
@@ -84,21 +91,33 @@ WHOIS information helps security professionals understand the registration histo
 The use of a domain privacy service is a normal privacy measure and should not be treated as a security weakness. The different nameserver entries should be checked against the current authoritative DNS delegation before drawing any conclusion. 
  
 # 4.1.2 WhatWeb Scan 
-**Objective: To identify the technologies and applications used by the website. 
-Command used: **
+
+**Objective:** To identify the technologies and applications used by the website. 
+
+**Command used:**
 whatweb networkwalks.com 
  **
 Observations:** 
+
 WhatWeb identified the following technologies and information:
 *Web server:Apache
+
 *Website platform: WordPress 7.1.4
+
 *WordPress Download Manager: 3.3.76
+
 *jQuery: 3.7.1
+
 *Google Tag Manager
+
 *Bootstrap fingerprint
+
 *HTML5
+
 *Open Graph metadata
+
 *Website IP address: 192.232.216.135
+
 The scan also identified a cookie named __wpdm_client with the HttpOnly attribute. 
 
 **Security significance:**
